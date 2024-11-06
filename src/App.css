@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin; /* Mengatur tinggi logo dengan unit yang responsif */
+  pointer-events: none; /* Menghindari interaksi dengan logo */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Memutar logo jika pengguna tidak memilih preferensi gerakan berkurang */
+  }
+}
+
+.App-header {
+  background-color: #282c34; /* Warna latar belakang header */
+  min-height: 100vh; /* Set minimal tinggi header agar mengisi seluruh layar */
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  flex-direction: column; /* Menyusun elemen secara kolom */
+  align-items: center; /* Meratakan elemen secara horizontal di tengah */
+  justify-content: center; /* Meratakan elemen secara vertikal di tengah */
+  font-size: calc(10px + 2vmin); /* Ukuran font responsif */
+  color: white; /* Warna teks header */
+}
+
+.App-link {
+  color: #61dafb; /* Warna tautan */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Memulai rotasi dari 0 derajat */
+  }
+  to {
+    transform: rotate(360deg); /* Menyelesaikan rotasi di 360 derajat */
+  }
+}
+
+/* Tambahan untuk responsivitas navbar jika diperlukan */
+@media (max-width: 768px) {
+  .App-header {
+    flex-direction: column; /* Pastikan header menumpuk pada layar kecil */
+    padding: 20px; /* Tambahkan padding */
+  }
+}

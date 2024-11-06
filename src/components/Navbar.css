@@ -1,0 +1,63 @@
+/* Basic Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    position: relative; /* Tambahkan ini agar .toggle-btn bisa menggunakan posisi absolut */
+}
+
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.navbar-list li {
+    margin: 0 15px;
+}
+
+.navbar-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-list li a:hover {
+    color: #f4b400;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-list {
+        flex-direction: column;
+        display: none;
+    }
+    .navbar-list.show {
+        display: flex;
+    }
+}
+
+.toggle-btn {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+        position: absolute;
+        right: 20px; /* Menempatkan tombol di kanan */
+        top: 10px;
+    }
+}
